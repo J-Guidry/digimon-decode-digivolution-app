@@ -1,0 +1,199 @@
+body {
+    /* background-color: #f8f8ff; */
+    background-color: rgba(195, 235, 253, 0.4);
+}
+
+button {
+    border: none;
+    color: unset;
+    background-color: unset;
+    cursor: pointer;
+}
+
+h3{
+    margin: 25px 0;
+}
+
+option {
+    margin: 10px 0 10px 5px;
+}
+
+.heading, .heading-desc {
+    margin-top: 30px;
+}
+
+.select {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 45%;
+    display: inline-block;
+}
+
+.toggle-btn{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 15px;
+    vertical-align: auto;
+    padding: 12px 15px;
+    width: 25%;
+}
+
+.sub-dub {
+    display: inline-block;
+    margin-top: 15px;
+
+}
+
+.toggle-box {
+    display: none;
+}
+
+.digimon-intro {
+    margin-top: 50px;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.sprite {
+    margin-right: 30px;
+}
+
+.stage-collection {
+    display: flex;
+    justify-content: normal;
+    flex-wrap: wrap;
+}
+
+.stage-btn {
+    margin: 10px;
+}
+
+.evolvesFromBtn {
+    margin-right: 20px;
+}
+.evolvesFromBtn p {
+    text-decoration: underline;
+}
+
+tbody td {
+    font-weight: 600;
+    /* font-size: 1.1rem; */
+}
+
+@media (max-width:768px){
+    .digimon-intro {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1300px){
+    .toggle-btn {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .stage-collection {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .stage-btn {
+        /* margin: 15px 80px; */
+        width: 30%;
+        padding: 17px 3px;
+    }
+
+    .select {
+        width: 90%;
+    }
+    .firstTd {
+        padding: 3px 1px 3px 0;
+    }
+
+    .firstTd::before{
+        /* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+        /* left: 6px; */
+        left: -516px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    }
+
+    .space{
+        padding: 3px 1px 3px 247px;
+    }
+
+    .toggle-btn {
+        width: 80%;
+    }
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+    
+    .toggle-tr {
+        border: none;
+    }
+
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 2px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+        /* left: 6px; */
+        left: 16px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	#table td:nth-of-type(1):before { content: "HP"; }
+	#table td:nth-of-type(2):before { content: "MP"; }
+	#table td:nth-of-type(3):before { content: "ATK"; }
+	#table td:nth-of-type(4):before { content: "DEF"; }
+	#table td:nth-of-type(5):before { content: "SPD"; }
+	#table td:nth-of-type(6):before { content: "BRN"; }
+	#table td:nth-of-type(7):before { content: "WEIGHT"; }
+    #table td:nth-of-type(8):before { content: "MISTAKES"; }
+	#table td:nth-of-type(9):before { content: "HAPPINESS"; }
+	#table td:nth-of-type(10):before { content: "DISCIPLINE"; }
+	#table td:nth-of-type(11):before { content: "BATTLES"; }
+	#table td:nth-of-type(12):before { content: "TECHNIQUE"; }
+    #table td:nth-of-type(13):before { content: "DECODE"; }
+    #table td:nth-of-type(14):before { content: "QUOTA"; }
+    
+
+}
+
+
+

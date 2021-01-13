@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon Decode Digivolution App</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <button class="btn btn-secondary sub-dub" onclick="controller.toggleSubDub()">Toggle Sub/Dub Names</button>
+            <h1 class="heading display-3">Digimon:Redigitize Decode <span class="title">Digivolution</span> App</h1>
+            <div class="top-select">
+                <select size="8" id="select" class="select form-select form-select-md"
+                onchange="controller.onSelection(this)">
+                    <option value="Make a Selection">Make a Selection</option>
+                </select>
+                <button class="btn btn-secondary toggle-btn" onclick="controller.toggleBox(this)">Click to Toggle Selection Box</button>
+
+            </div>
+            <p class="lead heading-desc">Choose a Digimon Stage for a New Smaller Selection Box</p>
+            <div class="stage-collection">
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+                <button onclick="controller.createSmallerDrop(this)"class="stage-btn btn btn-primary"></button>
+            </div>
+
+            <div class="digimon-intro">
+                <div class="sprite">
+                    <img id="sprite" src="" alt="">
+                </div>
+                <div class="digimon-info">
+                    <h2 id="name" class="name"></h2>
+                    <p id="stage" class="stage"></p> 
+                </div>
+            </div>
+
+
+            <div class="evolves-from" id="evolves-from">
+            </div>
+
+            <div class="table-responsive table" id="table">
+                <h3 id="requirements-heading" class="h3"></h3>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr class="table-dark stats-heading-row one">
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="requirements-row-body toggle-tr">
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="evolves-to" id="evolves-to">
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
