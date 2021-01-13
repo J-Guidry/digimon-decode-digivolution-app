@@ -195,7 +195,6 @@ const digiInfoView = {
         this.populateInfobox(info, name, stage, sprite)
     },
     populateInfobox: function(info, name, stage, sprite){
-        console.log(info);
         name.textContent = info.name;
         
         if(!info.name.includes("Digi-Egg") && !info.name.includes("Digitama") || info.name === "Digitamamon"){
