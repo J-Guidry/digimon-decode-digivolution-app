@@ -95,7 +95,7 @@ class Digimon {
 
         }
         let imageDir;
-        this.Dub ? imageDir = "./sprites/" : imageDir = "./sub_sprites/";
+        this.Dub ? imageDir = "./imgs/sprites/" : imageDir = "./imgs/sub_sprites/";
         if(name === "Sukamon" || name === "Scumon"){
             obj.img = await imageDir + name.toLowerCase() + ".png";
         }
@@ -256,7 +256,7 @@ const evolvesFromView = {
                 btn.onclick = controller.clickMon;
                 box.append(btn);
                 let imgDir;
-                Digimon.Dub ? imgDir = "./sprites/" : imgDir = "./sub_sprites/";
+                Digimon.Dub ? imgDir = "./imgs/sprites/" : imgDir = "./imgs/sub_sprites/";
                 img.src = imgDir + digimon.toLowerCase() + ".png";
                 img.alt = digimon;
                 name.textContent = digimon;
@@ -319,7 +319,7 @@ const evolvesToView = {
             btn.onclick = controller.clickMon;
             box.append(btn);
             let imgDir;
-            Digimon.Dub ? imgDir = "./sprites/" : imgDir = "./sub_sprites/";
+            Digimon.Dub ? imgDir = "./imgs/sprites/" : imgDir = "./imgs/sub_sprites/";
             img.src = imgDir + digimon.toLowerCase() + ".png";
             img.alt = digimon;
             name.textContent = digimon;
